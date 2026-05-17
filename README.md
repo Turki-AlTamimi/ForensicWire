@@ -48,7 +48,7 @@ Built for **educational environments**, **CTF competitions**, and **resource-lim
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/netspecter.git
+git clone https://github.com/Turki-AlTamimi/ForensicWire
 cd netspecter
 
 # Create virtual environment
