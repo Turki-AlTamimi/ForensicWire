@@ -10,13 +10,13 @@
 
 ## Overview
 
-NetSpecter is a modular, open-source network forensic analysis framework designed to detect three critical classes of malicious network behavior from packet capture (PCAP) files:
+ForensicWire is a modular, open-source network forensic analysis framework designed to detect three critical classes of malicious network behavior from packet capture (PCAP) files:
 
 - **C2 Beaconing** — periodic command-and-control communication patterns
 - **DNS Tunneling** — covert data channels over DNS queries
 - **Data Exfiltration** — unauthorized outbound data transfers
 
-Built for **educational environments**, **CTF competitions**, and **resource-limited organizations**, NetSpecter consolidates multiple detection algorithms into a unified, extensible Python toolkit. It operates entirely on existing PCAP captures using statistical and heuristic analysis — no machine learning dependencies, no expensive commercial tools.
+Built for **educational environments**, **CTF competitions**, and **resource-limited organizations**, ForensicWire consolidates multiple detection algorithms into a unified, extensible Python toolkit. It operates entirely on existing PCAP captures using statistical and heuristic analysis — no machine learning dependencies, no expensive commercial tools.
 
 ---
 
@@ -106,18 +106,6 @@ ForensicWire/
 ├── dns_detector.py    # Tunneling detection
 └── exfil_detector.py  # Data exfiltration
 ```
-
----
-
-## Validation Datasets
-
-NetSpecter is validated against publicly available benchmark datasets:
-
-| Dataset | Source | Use Case |
-|---------|--------|----------|
-| [CICIDS2017](https://www.unb.ca/cic/datasets/ids-2017.html) | Canadian Institute for Cybersecurity | Botnet & infiltration traffic |
-| [CTU-13](https://mcfp.felk.cvut.cz/publicDatasets/CTU-13-Dataset/) | Czech Technical University | Botnet detection evaluation |
-| [Stratosphere IPS](https://www.stratosphereips.org/datasets-overview) | Stratosphere Lab | Behavioral analysis research |
 
 ---
 
