@@ -49,7 +49,7 @@ Built for **educational environments**, **CTF competitions**, and **resource-lim
 ```bash
 # Clone the repository
 git clone https://github.com/Turki-AlTamimi/ForensicWire
-cd netspecter
+cd ForensicWire
 
 # Create virtual environment
 python3 -m venv venv
@@ -63,13 +63,13 @@ pip install -r requirements.txt
 
 ```bash
 # Analyze a single PCAP file
-python netspecter.py --pcap sample_traffic.pcap --output report.json
+python main_framework.py --pcap sample_traffic.pcap --output report.json
 
 # Run specific detection modules
-python netspecter.py --pcap sample_traffic.pcap --modules c2,dns,exfil
+python main_framework.py --pcap sample_traffic.pcap --modules c2,dns,exfil
 
 # Generate verbose report with packet-level details
-python netspecter.py --pcap sample_traffic.pcap --verbose --format json
+python main_framework.py --pcap sample_traffic.pcap --verbose --format json
 ```
 
 ### Example Output
@@ -100,20 +100,11 @@ python netspecter.py --pcap sample_traffic.pcap --verbose --format json
 ## Architecture
 
 ```
-netspecter/
+ForensicWire/
 ├── core/
-│   ├── engine.py          # Orchestration layer
-│   └── evidence.py        # Chain-of-custody & hashing
-├── modules/
-│   ├── c2_detector.py     # Beaconing analysis
-│   ├── dns_detector.py    # Tunneling detection
-│   └── exfil_detector.py  # Data exfiltration
-├── utils/
-│   ├── pcap_parser.py     # scapy/dpkt wrappers
-│   └── report_generator.py # JSON/CSV export
-├── datasets/              # Sample PCAPs & labels
-├── tests/                 # Unit & integration tests
-└── docs/                  # Methodology & API reference
+├── c2_detector.py     # Beaconing analysis
+├── dns_detector.py    # Tunneling detection
+└── exfil_detector.py  # Data exfiltration
 ```
 
 ---
