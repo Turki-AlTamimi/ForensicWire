@@ -1,0 +1,32 @@
+# =============================================================================
+# Malicious Network Behavior Detection Framework - Dependencies
+# =============================================================================
+# Digital Forensics Course Project
+# Install all dependencies: pip install -r requirements.txt
+# =============================================================================
+
+# Core packet analysis library - required for PCAP parsing and packet manipulation
+# Provides packet reading, dissection, and crafting capabilities
+scapy>=2.4.5
+
+# Alternative packet analysis library (optional enhancement)
+# Provides tshark integration for more protocol dissectors
+pyshark>=0.4.6
+
+# Low-level packet parsing library (optional, used for performance comparison)
+dpkt>=1.9.7
+
+# Numerical computing - used for statistical analysis and array operations
+numpy>=1.21.0
+
+# Data visualization - optional, for creating charts of detection results
+matplotlib>=3.4.0
+
+# =============================================================================
+# Notes:
+# - scapy is the primary required dependency
+# - pyshark requires tshark (Wireshark) to be installed on the system
+#   Install tshark: sudo apt-get install tshark  (Ubuntu/Debian)
+#                   brew install wireshark        (macOS)
+# - All other dependencies are Python-only and installable via pip
+# =============================================================================
